@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}title to be replaced{% endblock %}</title>
+</head>
+<body>
+    {% include 'navagation.html' %}
+    {% block content %}
+        <div>content to be replaced</div>
+    {% endblock %}
+    {% include 'bottom.html' %}
+</body>
+</html>

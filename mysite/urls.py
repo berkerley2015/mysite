@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from polls.views import hello
+admin.autodiscover()
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^hello/$', hello)
+    url(r'^$', 'polls.views.index', name='home'),
+    url(r'^sum/$', 'polls.views.sum', name='sum'),  #url without arguments
+    url(r'^sum2/(\d+)/(\d+)/$', 'polls.views.sum2', name='sum2'), #url includes arguments
+    url(r'^home/$','polls.views.home', name='home_template')
 ]
