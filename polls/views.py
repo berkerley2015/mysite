@@ -5,5 +5,6 @@ from django.shortcuts import HttpResponse
 
 def hello(request):
     print 'test git in pycharm'
+    print 'test git in pycharm again'
     return HttpResponse('Hello world!')
 #endof hello(request)
